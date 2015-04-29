@@ -11,4 +11,5 @@
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.rtsc.TIRTOSmsp430.example_15,type=rtsc,products=com.ti.rtsc.TIRTOSmsp430,target=gnu.targets.arm.M4F,platform=ti.platforms.msp432:$DeviceId$,buildProfile=release,isHybrid=true,"/>
+	<isTargetManual value="false"/>
 </projectOptions>

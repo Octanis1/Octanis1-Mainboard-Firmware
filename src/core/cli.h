@@ -14,3 +14,5 @@ void cli_register_command(void (*command_cb)(char*), char* commandstring);
 //runs with lowest priority
 void cli_task();
 
+//allows sending log messages to the console
+void cli_print();

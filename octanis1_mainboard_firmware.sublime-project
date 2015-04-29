@@ -1,0 +1,10 @@
+ {
+	"folders":
+	[
+		{
+			"path": ".",
+      		"file_include_patterns":["*.c","*.h","Makefile","*.cpp","*.txt","*.md"],
+      		"folder_exclude_patterns":[".config", ".launches", ".settings", "targetConfigs"]
+		}
+	]
+}

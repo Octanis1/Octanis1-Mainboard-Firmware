@@ -19,6 +19,15 @@
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Task.h>
 
+#include <ti/drivers/GPIO.h>
+#include <ti/drivers/UART.h>
+#include <ti/drivers/uart/UARTMSP432.h>
+
+/*
+ * Board specific header. Currently using TI's example for the launchpad. /todo
+ */
+#include "boards/MSP_EXP432P401RLP/Board.h"
+
 /*
  * System modules enabling a command line, testing and logging.
  */
@@ -42,20 +51,30 @@
 
 
 Int main()
-{ 
+{
+    //initializes the boards UART modules (needed before any uart objects can live)
+
+	/* Call board init functions */
+    Board_initGeneral();
+    Board_initGPIO();
+    Board_initUART();
+
+    /* Turn on user LED */
+    GPIO_write(Board_LED0, Board_LED_ON);
+
     Task_Handle task;
     Error_Block eb;
 
 
-    /*
     Error_init(&eb);
-    task = Task_create(taskFxn, NULL, &eb);
+    task = Task_create(cli_task, NULL, &eb);
     if (task == NULL) {
-        System_printf("Task_create() failed!\n");
+    	//task create failed, blink warning light
+        GPIO_write(Board_LED0, Board_LED_ON);
         BIOS_exit(0);
     }
 
     BIOS_start();
-    */
+
     return(0);
 }
