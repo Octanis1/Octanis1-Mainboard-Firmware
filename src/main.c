@@ -55,13 +55,21 @@ Int main()
     //initializes the boards UART modules (needed before any uart objects can live)
 
 	/* Call board init functions */
-    Board_initGeneral();
-    Board_initGPIO();
-    Board_initUART();
+   Board_initGeneral();
+   Board_initGPIO();
+  //  Board_initUART();
 
     /* Turn on user LED */
-    GPIO_write(Board_LED0, Board_LED_ON);
+   GPIO_write(75, Board_LED_ON);
 
+   while(1){
+	   GPIO_write(75, Board_LED_ON);
+	   GPIO_write(71, 1);
+
+
+   }
+
+    /*
     Task_Handle task;
     Error_Block eb;
 
@@ -75,6 +83,6 @@ Int main()
     }
 
     BIOS_start();
-
+	*/
     return(0);
 }
