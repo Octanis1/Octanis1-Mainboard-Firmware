@@ -6,10 +6,9 @@
 	<deviceEndianness value="little"/>
 	<codegenToolVersion value="GNU_4.8.4:Linaro"/>
 	<isElfFormat value="true"/>
-	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
-	<linkerCommandFile value="MSP432P401R.lds"/>
-	<rts value="libc.a"/>
+	<rts value=""/>
 	<createSlaveProjects value=""/>
-	<templateProperties value="id=com.ti.rtsc.TIRTOSmsp430.example_15,type=rtsc,products=com.ti.rtsc.TIRTOSmsp430,target=gnu.targets.arm.M4F,platform=ti.platforms.msp432:$DeviceId$,buildProfile=release,isHybrid=true,"/>
+	<templateProperties value="id=Octanis1-Mainboard-Firmware,type=rtsc,products=com.ti.rtsc.TIRTOSmsp430,xdcToolsVersion=3.31.00.24,target=gnu.targets.arm.M4F,platform=ti.platforms.msp432:MSP432P401R,buildProfile=release,isHybrid=true,configuroOptions=--compileOptions &quot;${COMPILER_FLAGS} &quot; ,"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
 	<isTargetManual value="false"/>
 </projectOptions>
