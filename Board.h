@@ -30,6 +30,26 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+
+/* XDCtools Header files */
+#include <xdc/std.h>
+#include <xdc/cfg/global.h>
+#include <xdc/runtime/System.h>
+
+/* BIOS Header files */
+#include <ti/sysbios/BIOS.h>
+
+/* TI-RTOS Header files */
+#include <ti/drivers/GPIO.h>
+#include <ti/drivers/UART.h>
+#include <ti/drivers/I2C.h>
+
+#include <stdint.h>
+#include <string.h>
+#include <ctype.h>
+
+
+
 #ifndef __BOARD_H
 #define __BOARD_H
 
@@ -57,6 +77,13 @@ extern "C" {
 // #define Board_HX1_EN				MSP_OCT1_432P401RLP_HX1_EN
 // #define Board_HX1_TX				MSP_OCT1_432P401RLP_HX1_TX
 
+
+#define Board_DEBUG0				MSP_OCT1_432P401RLP_DEBUG0
+#define Board_DEBUG1				MSP_OCT1_432P401RLP_DEBUG1
+#define Board_DEBUG2				MSP_OCT1_432P401RLP_DEBUG2
+#define Board_DEBUG3				MSP_OCT1_432P401RLP_DEBUG3
+
+
 #define Board_I2C0                  MSP_OCT1_432P401RLP_I2CB0
 
 #define Board_PWM0                  MSP_OCT1_432P401RLP_PWM_TA1_1
@@ -70,7 +97,7 @@ extern "C" {
 
 #define Board_WATCHDOG0             MSP_OCT1_432P401RLP_WATCHDOG
 
-#define Board_WIFI                  MSP_OCT1_432P401RLP_WIFI
+
 
 /* Board specific I2C addresses */
 #define Board_HMC5883L_ADDR           (0x3C >> 1)

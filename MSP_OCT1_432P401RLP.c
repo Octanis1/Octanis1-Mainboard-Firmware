@@ -60,6 +60,7 @@
 #include <wdt_a.h>
 
 #include "MSP_OCT1_432P401RLP.h"
+#include "fw/nav/drive.h"
 
 /*
  *  =============================== DMA ===============================
@@ -143,7 +144,21 @@ void MSP_OCT1_432P401RLP_initGeneral(void)
  */
 GPIO_PinConfig gpioPinConfigs[] = {
 
+	/* Input pins */
+
+	/* MSP_OCT1_432P401RLP_DEBUG0 */
+	GPIOMSP432_P5_5 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	/* MSP_OCT1_432P401RLP_DEBUG1 */
+	GPIOMSP432_P5_4 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	/* MSP_OCT1_432P401RLP_DEBUG2 */
+	GPIOMSP432_P5_3 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	/* MSP_OCT1_432P401RLP_DEBUG3 */
+	GPIOMSP432_P5_2 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+
+
+
     /* Output pins */
+
     /* MSP_OCT1_432P401RLP_LED0 */
     GPIOMSP432_P9_3 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
     /* MSP_OCT1_432P401RLP_LED1 */
@@ -187,10 +202,7 @@ GPIO_PinConfig gpioPinConfigs[] = {
 	/* MSP_OCT1_432P401RLP_M8IN1 */
 	GPIOMSP432_P3_1 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
 	/* MSP_OCT1_432P401RLP_M8IN2 */
-	GPIOMSP432_P8_2 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
-
-
-
+	GPIOMSP432_P8_2 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW
 };
 
 /*
@@ -201,6 +213,12 @@ GPIO_PinConfig gpioPinConfigs[] = {
  *       reduce memory usage (if placed at end of gpioPinConfigs array).
  */
 GPIO_CallbackFxn gpioCallbackFunctions[] = {
+
+		debugCb0,
+		debugCb1,
+		debugCb2,
+		debugCb3
+
 };
 
 /* The device-specific GPIO_config structure */
