@@ -6,6 +6,7 @@
 
 /* Task modules */
 #include "nav/drive.h"
+#include "peripherals/radio.h"
 
 
 /*

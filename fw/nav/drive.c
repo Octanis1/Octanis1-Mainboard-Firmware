@@ -18,7 +18,6 @@ Void driveTask(UArg arg0, UArg arg1){
 	GPIO_write(MSP_OCT1_432P401RLP_M5678SLEEP, Board_HBRIDGE_SLEEP_OFF);
 	GPIO_write(MSP_OCT1_432P401RLP_M1234SLEEP, Board_HBRIDGE_SLEEP_OFF);
 
-	GPIO_write(MSP_OCT1_432P401RLP_5V_EN, 0);
 
 	int dbg0 = 0;
 	int dbg1 = 0;
