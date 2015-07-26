@@ -48,20 +48,8 @@ Int main(void)
     Board_initUART();
     Board_initI2C();
 
+	GPIO_write(Board_LED0, Board_LED_ON);
 
-
-
-    /* install Button callback */
-    GPIO_setCallback(MSP_OCT1_432P401RLP_DEBUG0, debugCb0);
-    GPIO_setCallback(MSP_OCT1_432P401RLP_DEBUG1, debugCb1);
-    GPIO_setCallback(MSP_OCT1_432P401RLP_DEBUG2, debugCb2);
-    GPIO_setCallback(MSP_OCT1_432P401RLP_DEBUG3, debugCb3);
-
-    /* Enable interrupts */
-    GPIO_enableInt(MSP_OCT1_432P401RLP_DEBUG0);
-    GPIO_enableInt(MSP_OCT1_432P401RLP_DEBUG1);
-    GPIO_enableInt(MSP_OCT1_432P401RLP_DEBUG2);
-    GPIO_enableInt(MSP_OCT1_432P401RLP_DEBUG3);
 
 	System_printf("done setting up");
 

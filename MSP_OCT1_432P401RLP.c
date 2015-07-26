@@ -144,19 +144,6 @@ void MSP_OCT1_432P401RLP_initGeneral(void)
  */
 GPIO_PinConfig gpioPinConfigs[] = {
 
-	/* Input pins */
-
-	/* MSP_OCT1_432P401RLP_DEBUG0 */
-	GPIOMSP432_P5_5 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
-	/* MSP_OCT1_432P401RLP_DEBUG1 */
-	GPIOMSP432_P5_4 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
-	/* MSP_OCT1_432P401RLP_DEBUG2 */
-	GPIOMSP432_P5_3 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
-	/* MSP_OCT1_432P401RLP_DEBUG3 */
-	GPIOMSP432_P5_2 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
-
-
-
     /* Output pins */
 
     /* MSP_OCT1_432P401RLP_LED0 */
@@ -202,7 +189,22 @@ GPIO_PinConfig gpioPinConfigs[] = {
 	/* MSP_OCT1_432P401RLP_M8IN1 */
 	GPIOMSP432_P3_1 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
 	/* MSP_OCT1_432P401RLP_M8IN2 */
-	GPIOMSP432_P8_2 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW
+	GPIOMSP432_P8_2 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+
+
+
+	/* Input pins */
+
+	/* MSP_OCT1_432P401RLP_DEBUG0 */
+	GPIOMSP432_P4_5 | GPIO_CFG_INPUT | GPIO_CFG_IN_PD,
+	/* MSP_OCT1_432P401RLP_DEBUG1 */
+	GPIOMSP432_P4_4 | GPIO_CFG_INPUT | GPIO_CFG_IN_PD,
+	/* MSP_OCT1_432P401RLP_DEBUG2 */
+	GPIOMSP432_P4_3 | GPIO_CFG_INPUT | GPIO_CFG_IN_PD,
+	/* MSP_OCT1_432P401RLP_DEBUG3 */
+	GPIOMSP432_P4_2 | GPIO_CFG_INPUT | GPIO_CFG_IN_PD
+
+
 };
 
 /*
@@ -212,12 +214,7 @@ GPIO_PinConfig gpioPinConfigs[] = {
  * NOTE: Pins not used for interrupts can be omitted from callbacks array to
  *       reduce memory usage (if placed at end of gpioPinConfigs array).
  */
-GPIO_CallbackFxn gpioCallbackFunctions[] = {
-		NULL,
-		NULL,
-		NULL,
-		NULL
-};
+GPIO_CallbackFxn gpioCallbackFunctions[] = {};
 
 /* The device-specific GPIO_config structure */
 const GPIOMSP432_Config GPIOMSP432_config = {
