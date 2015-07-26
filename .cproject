@@ -140,6 +140,7 @@
 								<listOptionValue builtIn="false" value="XDC_VERSION=3.31.0.24_core"/>
 								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.rtsc.TIRTOSmsp430:2.12.0.24;"/>
 								<listOptionValue builtIn="false" value="OUTPUT_TYPE=rtscApplication:executable"/>
+								<listOptionValue builtIn="false" value="ADDITIONAL_FLAGS__COMPILER=-std=c99"/>
 							</option>
 							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1669092369" name="Compiler version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="GNU_4.8.4:Linaro" valueType="string"/>
 							<targetPlatform id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.exe.targetPlatformRelease.1376375531" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.exe.targetPlatformRelease"/>
@@ -163,9 +164,12 @@
 									<listOptionValue builtIn="false" value="TARGET_IS_FALCON"/>
 									<listOptionValue builtIn="false" value="gcc"/>
 									<listOptionValue builtIn="false" value="MSP432WARE"/>
+									<listOptionValue builtIn="false" value="timegm=mktime"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.FUNCTION_SECTIONS.850087459" name="Place each function into its own section (-ffunction-sections)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.FUNCTION_SECTIONS" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.DATA_SECTIONS.160620852" name="Place data items into their own section (-fdata-sections)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.DATA_SECTIONS" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.OPT_LEVEL.release.1434774265" name="Optimization Level" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.OPT_LEVEL.release" value="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.DWARF_VERSION.250379628" name="Generate debug information in DWARF version (-gdwarf-)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.DWARF_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__C_SRCS.1088072050" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__CPP_SRCS.1820364536" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__ASM_SRCS.1061053285" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.compiler.inputType__ASM_SRCS"/>
@@ -187,7 +191,7 @@
 									<listOptionValue builtIn="false" value="&quot;gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;c&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;m&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;rdimon&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;nosys&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.linkerID.SEARCH_PATH.1247867061" name="Library search path (-L, --library-path)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_GNU_4.0.linkerID.SEARCH_PATH" valueType="stringList">
 									<listOptionValue builtIn="false" value="&quot;${COM_TI_RTSC_TIRTOSMSP430_INSTALL_DIR}/products/MSPWare_2_00_00_40a/driverlib/MSP432P4xx/gcc&quot;"/>

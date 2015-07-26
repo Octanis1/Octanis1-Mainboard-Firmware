@@ -84,6 +84,7 @@ extern "C" {
 #define Board_DEBUG3				MSP_OCT1_432P401RLP_DEBUG3
 
 
+
 #define Board_I2C0                  MSP_OCT1_432P401RLP_I2CB0
 
 #define Board_PWM0                  MSP_OCT1_432P401RLP_PWM_TA1_1
@@ -97,6 +98,10 @@ extern "C" {
 
 #define Board_WATCHDOG0             MSP_OCT1_432P401RLP_WATCHDOG
 
+
+
+#define Board_HBRIDGE_SLEEP_OFF (1)
+#define Board_HBRIDGE_SLEEP_ON (0)
 
 
 /* Board specific I2C addresses */

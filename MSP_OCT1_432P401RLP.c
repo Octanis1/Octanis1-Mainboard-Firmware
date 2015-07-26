@@ -147,13 +147,13 @@ GPIO_PinConfig gpioPinConfigs[] = {
 	/* Input pins */
 
 	/* MSP_OCT1_432P401RLP_DEBUG0 */
-	GPIOMSP432_P5_5 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	GPIOMSP432_P5_5 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
 	/* MSP_OCT1_432P401RLP_DEBUG1 */
-	GPIOMSP432_P5_4 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	GPIOMSP432_P5_4 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
 	/* MSP_OCT1_432P401RLP_DEBUG2 */
-	GPIOMSP432_P5_3 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	GPIOMSP432_P5_3 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
 	/* MSP_OCT1_432P401RLP_DEBUG3 */
-	GPIOMSP432_P5_2 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+	GPIOMSP432_P5_2 | GPIO_CFG_IN_PD | GPIO_CFG_IN_INT_RISING,
 
 
 
@@ -213,12 +213,10 @@ GPIO_PinConfig gpioPinConfigs[] = {
  *       reduce memory usage (if placed at end of gpioPinConfigs array).
  */
 GPIO_CallbackFxn gpioCallbackFunctions[] = {
-
-		debugCb0,
-		debugCb1,
-		debugCb2,
-		debugCb3
-
+		NULL,
+		NULL,
+		NULL,
+		NULL
 };
 
 /* The device-specific GPIO_config structure */
